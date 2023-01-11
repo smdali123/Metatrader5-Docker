@@ -32,6 +32,7 @@ void GetPositions(CJAVal &dataObject)
          position["stoploss"]=PositionGetDouble(POSITION_SL);
          position["takeprofit"]=PositionGetDouble(POSITION_TP);
          position["volume"]=PositionGetDouble(POSITION_VOLUME);
+         position["profit"]=PositionGetDouble(POSITION_PROFIT);
 
          data["error"]=(bool) false;
          data["positions"].Add(position);
