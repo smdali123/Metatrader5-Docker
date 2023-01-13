@@ -43,7 +43,7 @@ Socket streamSocket(context,ZMQ_PUSH);
 //#include <ejtraderMT/ChartControl.mqh>
 
 // Global variables \\
-bool debug = false;
+bool debug = true;
 bool liveStream = false;
 bool connectedFlag = true;
 int deInitReason = -1;
