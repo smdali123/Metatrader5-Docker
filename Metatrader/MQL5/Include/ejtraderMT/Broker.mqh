@@ -21,7 +21,7 @@ void GetPositions(CJAVal &dataObject)
      {
       mControl.mResetLastError();
       
-      if(myposition.Select(PositionGetTicket(i)))
+      if(myposition.Select(PositionGetSymbol(i)))
         {
 
          position["id"]=PositionGetInteger(POSITION_IDENTIFIER);
