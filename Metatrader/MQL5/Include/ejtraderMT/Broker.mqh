@@ -35,9 +35,10 @@ void GetPositions(CJAVal &dataObject)
          position["volume"]=PositionGetDouble(POSITION_VOLUME);
          position["profit"]=PositionGetDouble(POSITION_PROFIT);
 
+        }
+        
          data["error"]=(bool) false;
          data["positions"].Add(position);
-        }
          CheckError(__FUNCTION__);
      }
 
