@@ -21,8 +21,6 @@ void GetPositions(CJAVal &dataObject)
      {
       mControl.mResetLastError();
 
-      if(myposition.Select(PositionGetSymbol(i)))
-        {
          position["id"]=PositionGetInteger(POSITION_IDENTIFIER);
          position["magic"]=PositionGetInteger(POSITION_MAGIC);
          position["symbol"]=PositionGetString(POSITION_SYMBOL);
@@ -36,8 +34,8 @@ void GetPositions(CJAVal &dataObject)
 
          data["error"]=(bool) false;
          data["positions"].Add(position);
-        }
-      CheckError(__FUNCTION__);
+        
+         CheckError(__FUNCTION__);
      }
 
    string t=data.Serialize();
