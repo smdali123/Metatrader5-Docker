@@ -20,6 +20,9 @@ void GetPositions(CJAVal &dataObject)
    for(int i=0; i<positionsTotal; i++)
      {
       mControl.mResetLastError();
+      
+      if(myposition.Select(PositionSelect(i)))
+        {
 
          position["id"]=PositionGetInteger(POSITION_IDENTIFIER);
          position["magic"]=PositionGetInteger(POSITION_MAGIC);
@@ -34,7 +37,7 @@ void GetPositions(CJAVal &dataObject)
 
          data["error"]=(bool) false;
          data["positions"].Add(position);
-        
+        }
          CheckError(__FUNCTION__);
      }
 
