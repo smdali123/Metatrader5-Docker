@@ -21,7 +21,7 @@ void GetPositions(CJAVal &dataObject)
      {
       mControl.mResetLastError();
 
-      if(myposition.Select(PositionGetSymbol(i)))
+      if(myposition.SelectByIndex(i))
         {
          position["id"]=PositionGetInteger(POSITION_IDENTIFIER);
          position["magic"]=PositionGetInteger(POSITION_MAGIC);
